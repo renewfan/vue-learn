@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'Index',
+  name: 'list',
   data () {
     return {
-      msg: 'Welcome to Index'
+      msg: 'Welcome to list'
     }
   }
 }
