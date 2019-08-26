@@ -11,7 +11,7 @@
       城市
       <span class="iconfont city-icon">&#xe64a;</span></div>
   </div>
-  <!-- 1rem=html font-size = 50rpx (reset.css 中进行了设置 font-size = 50rpx) -->
+  <!-- 1rem=html font-size = 50px (reset.css 中进行了设置 font-size = 50px) -->
 </template>
 
 <script>
@@ -52,6 +52,7 @@ export default {
       width :1.24rem
       float : right
       text-align : center
+      flex-wrap wrap
       .city-icon
         margin-left : -.04rem
         font-size : .24rem
