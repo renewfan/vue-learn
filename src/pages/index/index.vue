@@ -1,10 +1,11 @@
 <template>
-  <!-- <h1>{{msg}}</h1> -->
   <!-- 组件使用 -->
   <div>
     <index-header></index-header>
     <index-swiper></index-swiper>
     <index-icons></index-icons>
+    <index-sell></index-sell>
+    <index-week></index-week>
   </div>
 </template>
 
@@ -13,6 +14,8 @@
 import IndexHeader from './components/IndexHeader'
 import IndexSwiper from './components/IndexSwiper'
 import IndexIcons from './components/IndexIcons'
+import IndexSell from './components/IndexSell'
+import IndexWeek from './components/IndexWeek'
 export default {
   name: 'Index',
   data () {
@@ -24,7 +27,9 @@ export default {
   components: {
     IndexHeader,
     IndexSwiper,
-    IndexIcons
+    IndexIcons,
+    IndexSell,
+    IndexWeek
   }
 }
 </script>
