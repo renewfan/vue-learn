@@ -1,0 +1,107 @@
+{
+  "data": {
+    "city":"北京",
+    "Swiperimgs": [
+      {
+        "id": "01",
+        "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
+      },
+      {
+        "id": "02",
+        "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20198/3e7a8754d187431f70b6b21c2a405a64.png_750x200_93486d82.png"
+      }
+    ],
+    "icons": [
+      {
+        "id": 1,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "name": "景点门票"
+      },
+      {
+        "id": 2,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+        "name": "少林寺"
+      },
+      {
+        "id": 3,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+        "name": "水乐园"
+      },
+      {
+        "id": 4,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+        "name": "园博园"
+      },
+      {
+        "id": 5,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/b2/bfbc5d66e0ab5a02.png",
+        "name": "冰雪世界"
+      },
+      {
+        "id": 6,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png",
+        "name": "动物园"
+      },
+      {
+        "id": 7,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
+        "name": "实景演出"
+      },
+      {
+        "id": 8,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/85/77241e9427222b02.png",
+        "name": "大山大河"
+      },
+      {
+        "id": 9,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png",
+        "name": "大山大河"
+      },
+      {
+        "id": 10,
+        "iconurl": "http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
+        "name": "实景演出"
+      }
+    ],
+    "SellList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_140x140_73fda71d.jpg",
+        "title": "大连圣亚海洋世界",
+        "desc": "浪漫大连首站，浪漫的海洋主题乐园"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_140x140_73fda71d.jpg",
+        "title": "大连圣亚海洋世界",
+        "desc": "浪漫大连首站，浪漫的海洋主题乐园"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_140x140_73fda71d.jpg",
+        "title": "大连圣亚海洋世界",
+        "desc": "浪漫大连首站，浪漫的海洋主题乐园"
+      }
+    ],
+    "WeekList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9f/f585152825459.jpg_r_640x214_5d46e4cc.jpg",
+        "title": "大连圣亚海洋世界",
+        "desc": "浪漫大连首站，浪漫的海洋主题乐园"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9f/f585152825459.jpg_r_640x214_5d46e4cc.jpg",
+        "title": "大连圣亚海洋世界",
+        "desc": "浪漫大连首站，浪漫的海洋主题乐园"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9f/f585152825459.jpg_r_640x214_5d46e4cc.jpg",
+        "title": "大连圣亚海洋世界",
+        "desc": "浪漫大连首站，浪漫的海洋主题乐园"
+      }
+    ]
+  }
+}

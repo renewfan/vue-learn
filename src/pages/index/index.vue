@@ -1,7 +1,7 @@
 <template>
   <!-- 组件使用 -->
   <div>
-    <index-header></index-header>
+    <index-header v-bind:city="city"></index-header>
     <index-swiper></index-swiper>
     <index-icons></index-icons>
     <index-sell></index-sell>
@@ -16,11 +16,13 @@ import IndexSwiper from './components/IndexSwiper'
 import IndexIcons from './components/IndexIcons'
 import IndexSell from './components/IndexSell'
 import IndexWeek from './components/IndexWeek'
+import axios from 'axios'
+
 export default {
   name: 'Index',
   data () {
     return {
-      msg: 'Welcome to Index'
+      city: ''
     }
   },
   // 注册组件
@@ -30,6 +32,17 @@ export default {
     IndexIcons,
     IndexSell,
     IndexWeek
+  },
+  mounted () {
+    this.getIndexdata()
+  },
+  methods: {
+    getIndexdata () {
+      axios.get('/api/index.json').then(res => {
+        let data = res.data.data
+        this.city = data.city
+      })
+    }
   }
 }
 </script>
