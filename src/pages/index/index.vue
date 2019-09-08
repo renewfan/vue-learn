@@ -2,10 +2,10 @@
   <!-- 组件使用 -->
   <div>
     <index-header v-bind:city="city"></index-header>
-    <index-swiper></index-swiper>
-    <index-icons></index-icons>
-    <index-sell></index-sell>
-    <index-week></index-week>
+    <index-swiper :imgs="Swiperimgs"></index-swiper>
+    <index-icons :icons="icons"></index-icons>
+    <index-sell :selllist="SellList"></index-sell>
+    <index-week :WeekList="WeekList"></index-week>
   </div>
 </template>
 
@@ -22,7 +22,11 @@ export default {
   name: 'Index',
   data () {
     return {
-      city: ''
+      city: '',
+      Swiperimgs: [],
+      icons: [],
+      SellList: [],
+      WeekList: []
     }
   },
   // 注册组件
@@ -41,6 +45,10 @@ export default {
       axios.get('/api/index.json').then(res => {
         let data = res.data.data
         this.city = data.city
+        this.Swiperimgs = data.Swiperimgs
+        this.icons = data.icons
+        this.SellList = data.SellList
+        this.WeekList = data.WeekList
       })
     }
   }
@@ -48,5 +56,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

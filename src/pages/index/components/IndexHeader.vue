@@ -8,7 +8,7 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-r">
-      {{this.city}}
+      {{city}}
       <span class="iconfont city-icon">&#xe64a;</span></div>
   </div>
   <!-- 1rem=html font-size = 50px (reset.css 中进行了设置 font-size = 50px) -->

@@ -1,6 +1,6 @@
 <template>
   <div class="swiper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="hasimgs">
       <!-- slides -->
       <swiper-slide v-for="item of imgs" :key="item.id">
         <img class="swiper-img" :src="item.imgurl">
@@ -14,6 +14,9 @@
 <script>
 export default {
   name: 'IndexSwiper',
+  props: {
+    imgs: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -30,17 +33,12 @@ export default {
         // direction: 'vertical',
         // 切换效果
         effect: 'fade'
-      },
-      imgs: [
-        {
-          id: '01',
-          imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg'
-        },
-        {
-          id: '02',
-          imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20198/3e7a8754d187431f70b6b21c2a405a64.png_750x200_93486d82.png'
-        }
-      ]
+      }
+    }
+  },
+  computed: {
+    hasimgs () {
+      return this.imgs.length
     }
   }
 }
