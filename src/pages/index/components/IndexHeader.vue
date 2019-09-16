@@ -7,9 +7,12 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-r">
-      {{city}}
-      <span class="iconfont city-icon">&#xe64a;</span></div>
+    <router-link to="/city">
+      <div class="header-r">
+        {{city}}
+        <span class="iconfont city-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
   <!-- 1rem=html font-size = 50px (reset.css 中进行了设置 font-size = 50px) -->
 </template>
@@ -51,6 +54,7 @@ export default {
       float : right
       text-align : center
       flex-wrap wrap
+      color #ffffff
       .city-icon
         margin-left : -.04rem
         font-size : .24rem
