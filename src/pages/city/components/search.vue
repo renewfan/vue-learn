@@ -1,10 +1,9 @@
 <template>
   <div>
     <div class="search">
-      <input class="search-input" type="text" placeholder="输入城市名或拼音" />
-      <!-- <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音" /> -->
+      <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音" />
     </div>
-    <!-- <div class="search-content" ref="search" v-show="keyword" >
+    <div class="search-content" ref="search" v-show="keyword" >
       <ul>
         <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)" >
           {{item.name}}
@@ -13,25 +12,25 @@
           没有找到匹配数据
         </li>
       </ul>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
-// import Bscroll from 'better-scroll'
+import Bscroll from 'better-scroll'
 // import { mapMutations } from 'vuex'
 export default {
-  name: 'search'
-  // props: {
-  //   cities: Object
-  // },
-  // data () {
-  //   return {
-  //     keyword: '',
-  //     list: [],
-  //     timer: null
-  //   }
-  // },
+  name: 'search',
+  props: {
+    cities: Object
+  },
+  data () {
+    return {
+      keyword: '',
+      list: [],
+      timer: null
+    }
+  },
   // computed: {
   //   hasNoData () {
   //     return !this.list.length
@@ -66,9 +65,9 @@ export default {
   //   },
   //   ...mapMutations(['changeCity'])
   // },
-  // mounted () {
-  //   this.scroll = new Bscroll(this.$refs.search)
-  // }
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.search)
+  }
 }
 </script>
 
