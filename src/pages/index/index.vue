@@ -1,8 +1,8 @@
 <template>
   <!-- 组件使用 -->
   <div>
-    <index-header v-bind:city="city"></index-header>
-    <index-swiper :imgs="Swiperimgs"></index-swiper>
+    <index-header></index-header>
+    <index-swiper v-bind:imgs="Swiperimgs"></index-swiper>
     <index-icons :icons="icons"></index-icons>
     <index-sell :selllist="SellList"></index-sell>
     <index-week :WeekList="WeekList"></index-week>
@@ -17,12 +17,12 @@ import IndexIcons from './components/IndexIcons'
 import IndexSell from './components/IndexSell'
 import IndexWeek from './components/IndexWeek'
 import axios from 'axios'
-
+import { mapState } from 'vuex'
 export default {
   name: 'Index',
   data () {
     return {
-      city: '',
+      lastcity: '',
       Swiperimgs: [],
       icons: [],
       SellList: [],
@@ -37,19 +37,30 @@ export default {
     IndexSell,
     IndexWeek
   },
+  computed: {
+    ...mapState(['city'])
+  },
   mounted () {
+    // 第一次进入页面调用，类似小程序 onLoad
+    this.lastcity = this.city
     this.getIndexdata()
   },
   methods: {
     getIndexdata () {
-      axios.get('/api/index.json').then(res => {
+      axios.get('/api/index.json?city=' + this.city).then(res => {
         let data = res.data.data
-        this.city = data.city
         this.Swiperimgs = data.Swiperimgs
         this.icons = data.icons
         this.SellList = data.SellList
         this.WeekList = data.WeekList
       })
+    }
+  },
+  activated () {
+    // 每次进入页面都调用，类似小程序 onshow
+    if (this.lastcity !== this.city) {
+      this.lastcity = this.city
+      this.getIndexdata()
     }
   }
 }

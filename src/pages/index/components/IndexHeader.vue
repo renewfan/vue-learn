@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-r">
-        {{city}}
+        {{nowcity}}
         <span class="iconfont city-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -18,10 +18,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'IndexHeader',
-  props: {
-    city: String
+  computed: {
+    // ...mapState(['city'])
+    ...mapState({
+      nowcity: 'city'
+    })
   }
 }
 </script>
@@ -50,7 +54,8 @@ export default {
       border-radius : .1rem
       text-align : left
     .header-r
-      width :1.24rem
+      min-width :1.04rem
+      padding 0 .1rem
       float : right
       text-align : center
       flex-wrap wrap

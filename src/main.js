@@ -9,6 +9,7 @@ import 'styles/border.css'
 import 'styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import cityshow from './globaldata/index'
 
 Vue.use(VueAwesomeSwiper)
 
@@ -20,6 +21,7 @@ Fastclick.attach(document.body)
 new Vue({
   el: '#app',
   router,
+  store: cityshow,
   components: { App },
   template: '<App/>'
 })

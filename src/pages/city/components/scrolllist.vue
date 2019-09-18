@@ -5,16 +5,16 @@
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
-          <!-- <div class="button-wrapper">
-            <div class="button">{{this.currentCity}}</div>
-          </div>-->
+          <div class="button-wrapper">
+            <div class="button">{{nowcity}}</div>
+          </div>
         </div>
       </div>
       <!-- 热门城市 -->
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper" v-for="item of hotcities" :key="item.id" @click="handleCityClick(item.name)">
+          <div class="button-wrapper" v-for="item of hotcities" :key="item.id" @click="tabcityname(item.name)">
             <div class="button">{{item.name}}</div>
           </div>
         </div>
@@ -23,7 +23,7 @@
       <div class="area" v-for="(item,key) of cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">
+          <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id" @click="tabcityname(innerItem.name)">
             {{innerItem.name}}
           </div>
         </div>
@@ -35,7 +35,7 @@
 <script>
 // 引入 BetterScroll
 import Bscroll from 'better-scroll'
-// import { mapState, mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'citylist',
   props: {
@@ -43,17 +43,18 @@ export default {
     cities: Object,
     letter: String
   },
-  // computed: {
-  //   ...mapState({
-  //     currentCity: 'city'
-  //   })
-  // },
+  computed: {
+    ...mapState({
+      nowcity: 'city'
+    })
+  },
   methods: {
-    handleCityClick (city) {
-      this.changeCity(city)
+    tabcityname (city) {
+      this.changecity(city)
+      // this.$store.commit('changecity',city)
       this.$router.push('/')
-    }
-    // ...mapMutations(['changeCity'])
+    },
+    ...mapMutations(['changecity'])
   },
   watch: {
     // 监听字母变化滚动列表到对应位置
